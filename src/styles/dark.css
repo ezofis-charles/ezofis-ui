@@ -1,15 +1,15 @@
 :root[data-mantine-color-scheme='dark'] {
   --primary-1: #140e1c;
-  --primary-2: #1c1329;
-  --primary-3: #2e1847;
-  --primary-4: #3c1b5e;
-  --primary-5: #46226e;
-  --primary-6: #532c7e;
-  --primary-7: #663a98;
-  --primary-8: #854bc5;
-  --primary-9: #9333ea;
-  --primary-10: #861dda;
-  --primary-11: #cd9eff;
+  --primary-2: #1d1328;
+  --primary-3: #2e1945;
+  --primary-4: #3c1c5b;
+  --primary-5: #47236a;
+  --primary-6: #542d7a;
+  --primary-7: #673b94;
+  --primary-8: #864dc0;
+  --primary-9: #a855f7;
+  --primary-10: #9b47e9;
+  --primary-11: #d09dff;
   --primary-12: #ead8ff;
 
   --secondary-1: #071315;

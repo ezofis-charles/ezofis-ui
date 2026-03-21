@@ -34,7 +34,7 @@ export const MenuItem = ({ icon, iconClassName, label, route }: Props) => {
             isActive && 'bg-gray-4',
           )}
         >
-          <div className='flex size-9 items-center justify-center'>
+          <div className='flex size-8 shrink-0 items-center justify-center'>
             <Icon
               name={icon}
               className={cn(

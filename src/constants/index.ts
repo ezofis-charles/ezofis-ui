@@ -7,8 +7,8 @@ export const SCREEN_SIZE = {
 } as const
 
 export const SIDEBAR_SIZE = {
-  COLLAPSED: 52,
-  EXPANDED: 236,
+  COLLAPSED: 48,
+  EXPANDED: 240,
 } as const
 
 export const AI_BAR_WIDTH = 384

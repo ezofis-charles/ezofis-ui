@@ -15,9 +15,9 @@ export const Logo = () => {
   const isSidebarOpen = useSidebarStore((state) => state.isSidebarOpen)
 
   return (
-    <div className='mx-2 flex h-13 items-center gap-0.5 overflow-hidden'>
-      <div className='flex size-9 shrink-0 items-center justify-center'>
-        <img alt='logo mark' className='size-8' src={logoMark} />
+    <div className='flex h-12 items-center gap-0.5 overflow-hidden px-2'>
+      <div className='flex size-8 shrink-0 items-center justify-center'>
+        <img alt='logo mark' className='size-7' src={logoMark} />
       </div>
       <AnimatePresence initial={false}>
         {isSidebarOpen && (

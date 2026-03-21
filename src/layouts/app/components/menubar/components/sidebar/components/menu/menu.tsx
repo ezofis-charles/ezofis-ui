@@ -22,8 +22,8 @@ export const Menu = ({ menuGroup }: Props) => {
   const isSidebarOpen = useSidebarStore((state) => state.isSidebarOpen)
 
   return (
-    <ScrollArea style={{ height: 'calc(100dvh - 116px)' }}>
-      <nav className='mt-2.5'>
+    <ScrollArea style={{ height: 'calc(100dvh - 108px)' }}>
+      <nav className='mt-2'>
         {menuGroup.map((group, index) => (
           <div key={group.label}>
             <AnimatePresence initial={false}>

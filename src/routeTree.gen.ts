@@ -17,7 +17,9 @@ import { Route as DesignSystemTypographyRouteImport } from './routes/design-syst
 import { Route as DesignSystemColorsRouteImport } from './routes/design-system/colors'
 import { Route as AuthSignInRouteImport } from './routes/_auth/sign-in'
 import { Route as AuthLoginRouteImport } from './routes/_auth/login'
+import { Route as AppWorkflowsRouteImport } from './routes/_app/workflows'
 import { Route as AppRequestsRouteImport } from './routes/_app/requests'
+import { Route as AppFormsRouteImport } from './routes/_app/forms'
 import { Route as DesignSystemComponentsIndexRouteImport } from './routes/design-system/components/index'
 import { Route as DesignSystemComponentsTreeRouteImport } from './routes/design-system/components/tree'
 import { Route as DesignSystemComponentsTourRouteImport } from './routes/design-system/components/tour'
@@ -116,9 +118,19 @@ const AuthLoginRoute = AuthLoginRouteImport.update({
   path: '/login',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AppWorkflowsRoute = AppWorkflowsRouteImport.update({
+  id: '/workflows',
+  path: '/workflows',
+  getParentRoute: () => AppRouteRoute,
+} as any)
 const AppRequestsRoute = AppRequestsRouteImport.update({
   id: '/requests',
   path: '/requests',
+  getParentRoute: () => AppRouteRoute,
+} as any)
+const AppFormsRoute = AppFormsRouteImport.update({
+  id: '/forms',
+  path: '/forms',
   getParentRoute: () => AppRouteRoute,
 } as any)
 const DesignSystemComponentsIndexRoute =
@@ -473,7 +485,9 @@ const AppMyAccountChar123SlugChar125Route =
 export interface FileRoutesByFullPath {
   '/': typeof AppIndexRoute
   '/design-system': typeof DesignSystemRouteRouteWithChildren
+  '/forms': typeof AppFormsRoute
   '/requests': typeof AppRequestsRoute
+  '/workflows': typeof AppWorkflowsRoute
   '/login': typeof AuthLoginRoute
   '/sign-in': typeof AuthSignInRoute
   '/design-system/colors': typeof DesignSystemColorsRoute
@@ -539,7 +553,9 @@ export interface FileRoutesByFullPath {
   '/design-system/components/': typeof DesignSystemComponentsIndexRoute
 }
 export interface FileRoutesByTo {
+  '/forms': typeof AppFormsRoute
   '/requests': typeof AppRequestsRoute
+  '/workflows': typeof AppWorkflowsRoute
   '/login': typeof AuthLoginRoute
   '/sign-in': typeof AuthSignInRoute
   '/design-system/colors': typeof DesignSystemColorsRoute
@@ -609,7 +625,9 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/_app': typeof AppRouteRouteWithChildren
   '/design-system': typeof DesignSystemRouteRouteWithChildren
+  '/_app/forms': typeof AppFormsRoute
   '/_app/requests': typeof AppRequestsRoute
+  '/_app/workflows': typeof AppWorkflowsRoute
   '/_auth/login': typeof AuthLoginRoute
   '/_auth/sign-in': typeof AuthSignInRoute
   '/design-system/colors': typeof DesignSystemColorsRoute
@@ -680,7 +698,9 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/design-system'
+    | '/forms'
     | '/requests'
+    | '/workflows'
     | '/login'
     | '/sign-in'
     | '/design-system/colors'
@@ -746,7 +766,9 @@ export interface FileRouteTypes {
     | '/design-system/components/'
   fileRoutesByTo: FileRoutesByTo
   to:
+    | '/forms'
     | '/requests'
+    | '/workflows'
     | '/login'
     | '/sign-in'
     | '/design-system/colors'
@@ -815,7 +837,9 @@ export interface FileRouteTypes {
     | '__root__'
     | '/_app'
     | '/design-system'
+    | '/_app/forms'
     | '/_app/requests'
+    | '/_app/workflows'
     | '/_auth/login'
     | '/_auth/sign-in'
     | '/design-system/colors'
@@ -947,11 +971,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthLoginRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_app/workflows': {
+      id: '/_app/workflows'
+      path: '/workflows'
+      fullPath: '/workflows'
+      preLoaderRoute: typeof AppWorkflowsRouteImport
+      parentRoute: typeof AppRouteRoute
+    }
     '/_app/requests': {
       id: '/_app/requests'
       path: '/requests'
       fullPath: '/requests'
       preLoaderRoute: typeof AppRequestsRouteImport
+      parentRoute: typeof AppRouteRoute
+    }
+    '/_app/forms': {
+      id: '/_app/forms'
+      path: '/forms'
+      fullPath: '/forms'
+      preLoaderRoute: typeof AppFormsRouteImport
       parentRoute: typeof AppRouteRoute
     }
     '/design-system/components/': {
@@ -1364,13 +1402,17 @@ declare module '@tanstack/react-router' {
 }
 
 interface AppRouteRouteChildren {
+  AppFormsRoute: typeof AppFormsRoute
   AppRequestsRoute: typeof AppRequestsRoute
+  AppWorkflowsRoute: typeof AppWorkflowsRoute
   AppIndexRoute: typeof AppIndexRoute
   AppMyAccountChar123SlugChar125Route: typeof AppMyAccountChar123SlugChar125Route
 }
 
 const AppRouteRouteChildren: AppRouteRouteChildren = {
+  AppFormsRoute: AppFormsRoute,
   AppRequestsRoute: AppRequestsRoute,
+  AppWorkflowsRoute: AppWorkflowsRoute,
   AppIndexRoute: AppIndexRoute,
   AppMyAccountChar123SlugChar125Route: AppMyAccountChar123SlugChar125Route,
 }
