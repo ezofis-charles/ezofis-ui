@@ -18,7 +18,7 @@ export const NotificationsTrigger = () => {
         <ButtonIcon
           ariaLabel='notifications'
           color='gray'
-          icon='lucide:bell'
+          icon='tabler:bell'
           variant='ghost'
         />
       </Indicator>

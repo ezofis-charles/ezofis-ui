@@ -46,7 +46,7 @@ export const Title = ({
       {description && (
         <p
           className={cn(
-            'text-sm/6 text-pretty text-gray-11',
+            'text-micro/6 text-pretty text-gray-11',
             descriptionClassName,
           )}
         >

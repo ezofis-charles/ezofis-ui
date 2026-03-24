@@ -40,9 +40,9 @@ export const Stepper = ({
         stepCompletedIcon: 'text-primary-11 [&>svg]:!size-3.5',
         stepDescription: 'm-0 text-xs/5 text-gray-10',
         stepIcon:
-          'size-8 min-h-8 min-w-8 border-0 bg-gray-3 text-sm/5 font-semibold text-gray-11 data-[completed]:bg-primary-4 data-[progress]:bg-primary-9 data-[progress]:text-white',
+          'size-8 min-h-8 min-w-8 border-0 bg-gray-3 text-micro/5 font-semibold text-gray-11 data-[completed]:bg-primary-4 data-[progress]:bg-primary-9 data-[progress]:text-white',
         stepLabel: cn(
-          'text-sm font-medium text-gray-12',
+          'text-micro font-medium text-gray-12',
           orientation === 'vertical' && 'flex min-h-8.5 items-center',
         ),
         stepLoader: 'mt-1 after:border-gray-11 after:border-t-transparent',

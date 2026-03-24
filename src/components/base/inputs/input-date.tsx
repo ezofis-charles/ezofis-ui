@@ -79,15 +79,15 @@ const InputDate = forwardRef<HTMLInputElement, Props>(
           calendarHeaderControl:
             'text-gray-11 transition-colors hover:bg-gray-4 hover:text-gray-12 data-[disabled]:opacity-50',
           calendarHeaderLevel:
-            'text-sm font-semibold text-gray-11 transition-colors hover:bg-gray-4 hover:text-gray-12',
-          day: 'text-sm text-gray-11 transition-colors hover:bg-gray-4 hover:text-gray-12 data-[outside]:text-gray-8 data-[outside]:opacity-100 data-[outside]:hover:text-gray-12 data-[selected]:!bg-primary-9 data-[selected]:!font-medium data-[selected]:!text-white data-[today]:bg-primary-4 data-[today]:font-medium data-[today]:text-primary-11',
+            'text-micro font-semibold text-gray-11 transition-colors hover:bg-gray-4 hover:text-gray-12',
+          day: 'text-micro text-gray-11 transition-colors hover:bg-gray-4 hover:text-gray-12 data-[outside]:text-gray-8 data-[outside]:opacity-100 data-[outside]:hover:text-gray-12 data-[selected]:!bg-primary-9 data-[selected]:!font-medium data-[selected]:!text-white data-[today]:bg-primary-4 data-[today]:font-medium data-[today]:text-primary-11',
           description: classNames.description,
           error: classNames.error,
           input: classNames.input,
           label: classNames.label,
           monthsListControl:
             'text-gray-11 transition-colors hover:bg-gray-4 hover:text-gray-12 data-[disabled]:opacity-50 data-[selected]:!bg-primary-9 data-[selected]:!font-medium data-[selected]:!text-white',
-          weekday: 'p-2 text-sm text-gray-10',
+          weekday: 'p-2 text-micro text-gray-10',
           wrapper: classNames.wrapper,
           yearsListControl:
             'text-gray-11 transition-colors hover:bg-gray-4 hover:text-gray-12 data-[disabled]:opacity-50 data-[selected]:!bg-primary-9 data-[selected]:!font-medium data-[selected]:!text-white',

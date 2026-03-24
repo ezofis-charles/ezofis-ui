@@ -10,7 +10,7 @@ interface Props {
 export const Section = ({ children, className, title }: Props) => {
   return (
     <div className={cn('mb-16', className)}>
-      <h2 className='mb-8 border-b border-gray-3 pb-2 text-sm/7 font-semibold text-gray-12'>
+      <h2 className='mb-8 border-b border-gray-3 pb-2 text-micro/7 font-semibold text-gray-12'>
         # {title}
       </h2>
 

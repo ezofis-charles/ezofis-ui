@@ -23,7 +23,7 @@ function RouteComponent() {
             <h1 className='mb-2 text-base font-semibold text-gray-13'>
               Get Started
             </h1>
-            <p className='text-gray border-b border-gray-4 pb-4 text-sm/6 text-balance'>
+            <p className='text-gray border-b border-gray-4 pb-4 text-micro/6 text-balance'>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Consequatur possimus cupiditate molestias dolore, quasi ipsam
               rerum.

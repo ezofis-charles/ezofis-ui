@@ -82,6 +82,7 @@ function RouteComponent() {
           <Button label='Button' size='sm' />
           <Button label='Button' />
           <Button label='Button' size='lg' />
+          <Button label='Button' size='xl' />
         </div>
       </Section>
     </>

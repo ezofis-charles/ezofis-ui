@@ -5,7 +5,7 @@ export const LanguageToggle = () => {
   const { language, languages, setLanguage } = useLanguage()
 
   return (
-    <Menu.Sub icon='lucide:languages' label='Language'>
+    <Menu.Sub icon='material-symbols:translate-rounded' label='Language'>
       {languages.map(({ code, name }) => (
         <Menu.Item
           key={code}

@@ -2,14 +2,18 @@ import { Menu } from '@/components/base/menu'
 import { useTheme } from '@/hooks/use-theme'
 
 export const ThemeToggle = () => {
-  const { colorScheme, ColorSchemeOptions, handleColorSchemeChange } =
-    useTheme()
+  const {
+    colorScheme,
+    ColorSchemeOptions,
+    handleColorSchemeChange,
+    selectedColorScheme,
+  } = useTheme()
 
   return (
-    <Menu.Sub icon='lucide:sun-moon' label='Theme'>
+    <Menu.Sub icon={selectedColorScheme.icon} label='Theme'>
       {ColorSchemeOptions.map((option) => (
         <Menu.Item
-          icon={option.icon}
+          icon={option.value === colorScheme ? option.activeIcon : option.icon}
           key={option.value}
           label={option.label}
           iconClassName={

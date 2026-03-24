@@ -11,7 +11,7 @@ export const User = () => {
         size={36}
       />
       <div className='min-w-0 flex-1'>
-        <div className='truncate text-sm/5 font-medium text-gray-13'>
+        <div className='truncate text-micro/5 font-medium text-gray-13'>
           Charles Vinoth
         </div>
         <div className='truncate text-xs/5'>charles@ezofis.com</div>

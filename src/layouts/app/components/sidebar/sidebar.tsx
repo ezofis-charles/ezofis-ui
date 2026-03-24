@@ -1,7 +1,7 @@
 import { motion } from 'motion/react'
+import type { MenuGroup } from '@/layouts/app/app-layout.types'
 import { SIDEBAR_SIZE } from '@/constants'
 import { useSidebarStore } from '@/layouts/app/stores/use-sidebar-store'
-import type { MenuGroup } from '../../menubar.types'
 import { Logo } from './components/logo'
 import { Menu } from './components/menu'
 import { UserMenu } from './components/user-menu'

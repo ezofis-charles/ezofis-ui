@@ -8,8 +8,12 @@ import { useTheme } from '@/hooks/use-theme'
 
 export const ThemeSwitcher = () => {
   const { t } = useLingui()
-  const { colorScheme, ColorSchemeOptions, handleColorSchemeChange } =
-    useTheme()
+  const {
+    colorScheme,
+    ColorSchemeOptions,
+    handleColorSchemeChange,
+    selectedColorScheme,
+  } = useTheme()
 
   const [isMenuOpened, setIsMenuOpened] = useState(false)
 
@@ -22,7 +26,7 @@ export const ThemeSwitcher = () => {
       <ButtonIcon
         ariaLabel='Change theme'
         color='gray'
-        icon='tabler:percentage-50'
+        icon={selectedColorScheme.icon}
         variant='ghost'
       />
     </Tooltip>
@@ -43,7 +47,7 @@ export const ThemeSwitcher = () => {
       </Menu.Label>
       {ColorSchemeOptions.map((option) => (
         <Menu.Item
-          icon={option.icon}
+          icon={option.value === colorScheme ? option.activeIcon : option.icon}
           key={option.value}
           label={option.label}
           iconClassName={

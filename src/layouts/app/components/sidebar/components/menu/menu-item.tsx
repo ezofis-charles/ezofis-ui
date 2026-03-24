@@ -1,18 +1,23 @@
 import { Link, useLocation } from '@tanstack/react-router'
-import { AnimatePresence, motion } from 'motion/react'
-import type { MenuItem as MenuItemType } from '@/layouts/app/components/menubar/menubar.types'
+import type { MenuItem as MenuItemType } from '@/layouts/app/app-layout.types'
 import { Icon } from '@/components/base/icon'
 import { Tooltip } from '@/components/base/tooltip'
 import { TOOLTIP_DELAY } from '@/constants'
 import { useSidebarStore } from '@/layouts/app/stores/use-sidebar-store'
 import { cn } from '@/utils/cn'
-import { motionConfig } from '../../sidebar.utils'
+import { AnimatePresence } from '../animate-presence'
 
 interface Props extends MenuItemType {
   iconClassName?: string
 }
 
-export const MenuItem = ({ icon, iconClassName, label, route }: Props) => {
+export const MenuItem = ({
+  activeIcon,
+  icon,
+  iconClassName,
+  label,
+  route,
+}: Props) => {
   const isSidebarOpen = useSidebarStore((state) => state.isSidebarOpen)
   const pathname = useLocation({
     select: (location) => location.pathname,
@@ -36,7 +41,7 @@ export const MenuItem = ({ icon, iconClassName, label, route }: Props) => {
         >
           <div className='flex size-8 shrink-0 items-center justify-center'>
             <Icon
-              name={icon}
+              name={isActive ? activeIcon : icon}
               className={cn(
                 'transition-colors',
                 isActive
@@ -46,14 +51,11 @@ export const MenuItem = ({ icon, iconClassName, label, route }: Props) => {
               )}
             />
           </div>
-          <AnimatePresence initial={false}>
-            {isSidebarOpen && (
-              <motion.div {...motionConfig}>
-                <div className='pr-2 font-medium whitespace-nowrap text-gray-12'>
-                  {label}
-                </div>
-              </motion.div>
-            )}
+
+          <AnimatePresence>
+            <div className='pr-2 font-medium whitespace-nowrap text-gray-12'>
+              {label}
+            </div>
           </AnimatePresence>
         </Link>
       </Tooltip>

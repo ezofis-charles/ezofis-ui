@@ -28,7 +28,7 @@ export const AccordionItem = ({
           {header}
           {icon && <Icon className='text-gray-11' name={icon} />}
           {label && (
-            <div className='text-sm/6 font-medium text-gray-13'>{label}</div>
+            <div className='text-micro/6 font-medium text-gray-13'>{label}</div>
           )}
         </div>
       </Base.Control>

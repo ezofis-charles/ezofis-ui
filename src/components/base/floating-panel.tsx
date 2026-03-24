@@ -40,7 +40,7 @@ export const FloatingPanel = ({
           <Base.DragTrigger>
             <Base.Header className='flex h-13 flex-wrap items-center gap-1 pr-2 pl-4'>
               <Icon name='lucide:grip-vertical' />
-              <Base.Title className='ml-1 flex-1 text-sm/6 font-semibold text-gray-13'>
+              <Base.Title className='ml-1 flex-1 text-micro/6 font-semibold text-gray-13'>
                 {title}
               </Base.Title>
               <Base.Control>

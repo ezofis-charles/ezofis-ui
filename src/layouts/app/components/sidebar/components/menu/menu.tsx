@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'motion/react'
-import type { MenuGroup } from '@/layouts/app/components/menubar/menubar.types'
+import type { MenuGroup } from '@/layouts/app/app-layout.types'
 import { Divider } from '@/components/base/divider'
 import { ScrollArea } from '@/components/base/scroll-area'
 import { useSidebarStore } from '@/layouts/app/stores/use-sidebar-store'
@@ -23,7 +23,7 @@ export const Menu = ({ menuGroup }: Props) => {
 
   return (
     <ScrollArea style={{ height: 'calc(100dvh - 108px)' }}>
-      <nav className='mt-2'>
+      <nav className='py-2'>
         {menuGroup.map((group, index) => (
           <div key={group.label}>
             <AnimatePresence initial={false}>

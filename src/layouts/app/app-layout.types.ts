@@ -4,6 +4,7 @@ export interface MenuGroup {
 }
 
 export interface MenuItem {
+  activeIcon: string
   icon: string
   label: string
   route: string

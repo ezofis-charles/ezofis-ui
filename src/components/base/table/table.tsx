@@ -30,7 +30,7 @@ export const Table = ({
     >
       <table
         className={cn(
-          'w-full border-separate border-spacing-0 text-sm',
+          'w-full border-separate border-spacing-0 text-micro',
           className,
         )}
         {...props}

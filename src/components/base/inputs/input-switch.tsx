@@ -18,9 +18,9 @@ const InputSwitch = forwardRef<HTMLInputElement, Props>(
         withThumbIndicator={false}
         classNames={{
           body: 'inline-flex',
-          description: 'mt-1 pl-2 text-sm text-gray-10',
+          description: 'mt-1 pl-2 text-micro text-gray-10',
           input: 'peer',
-          label: 'pl-2 text-sm/5 font-medium text-gray-12',
+          label: 'pl-2 text-micro/5 font-medium text-gray-12',
           labelWrapper: 'data-[disabled]:opacity-50',
           thumb: 'bg-white shadow-sm',
           track: cn(

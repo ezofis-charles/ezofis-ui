@@ -8,7 +8,7 @@ export const GlobalSearch = () => {
       <ButtonIcon
         ariaLabel='search'
         color='gray'
-        icon='lucide:search'
+        icon='tabler:search'
         size='md'
         variant='ghost'
       />

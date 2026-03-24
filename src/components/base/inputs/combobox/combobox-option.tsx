@@ -36,9 +36,9 @@ export const ComboboxOption = ({
       )}
 
       <div>
-        <div className='text-sm/5 font-medium text-gray-12'>{name}</div>
+        <div className='text-micro/5 font-medium text-gray-12'>{name}</div>
         {description && (
-          <div className='text-sm/5 text-gray-10'>{description}</div>
+          <div className='text-micro/5 text-gray-10'>{description}</div>
         )}
       </div>
     </Base.Option>

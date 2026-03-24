@@ -1,14 +1,12 @@
 @theme inline {
   --radius: 6px;
 
-  --text-sm: 13px;
-  --text-md: 14px;
+  --text-micro: 0.8125rem;
+  --text-micro--line-height: 1rem;
+  --text-mini: 0.9375rem;
+  --text-mini--line-height: 1.25rem;
 
-  --font-weight-light: 400;
   --font-weight-normal: 450;
-  --font-weight-medium: 520;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 680;
 
   --color-*: initial;
 

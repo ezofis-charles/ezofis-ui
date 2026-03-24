@@ -20,7 +20,8 @@ export const Divider = ({
       labelPosition={labelPosition}
       orientation={orientation}
       classNames={{
-        label: 'text-sm text-gray-11 before:border-gray-4 after:border-gray-4',
+        label:
+          'text-micro text-gray-11 before:border-gray-4 after:border-gray-4',
         root: 'border-gray-4',
       }}
     />

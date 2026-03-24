@@ -18,8 +18,11 @@ import { Route as DesignSystemColorsRouteImport } from './routes/design-system/c
 import { Route as AuthSignInRouteImport } from './routes/_auth/sign-in'
 import { Route as AuthLoginRouteImport } from './routes/_auth/login'
 import { Route as AppWorkflowsRouteImport } from './routes/_app/workflows'
+import { Route as AppTasksRouteImport } from './routes/_app/tasks'
 import { Route as AppRequestsRouteImport } from './routes/_app/requests'
+import { Route as AppPortalsRouteImport } from './routes/_app/portals'
 import { Route as AppFormsRouteImport } from './routes/_app/forms'
+import { Route as AppFoldersRouteImport } from './routes/_app/folders'
 import { Route as DesignSystemComponentsIndexRouteImport } from './routes/design-system/components/index'
 import { Route as DesignSystemComponentsTreeRouteImport } from './routes/design-system/components/tree'
 import { Route as DesignSystemComponentsTourRouteImport } from './routes/design-system/components/tour'
@@ -123,14 +126,29 @@ const AppWorkflowsRoute = AppWorkflowsRouteImport.update({
   path: '/workflows',
   getParentRoute: () => AppRouteRoute,
 } as any)
+const AppTasksRoute = AppTasksRouteImport.update({
+  id: '/tasks',
+  path: '/tasks',
+  getParentRoute: () => AppRouteRoute,
+} as any)
 const AppRequestsRoute = AppRequestsRouteImport.update({
   id: '/requests',
   path: '/requests',
   getParentRoute: () => AppRouteRoute,
 } as any)
+const AppPortalsRoute = AppPortalsRouteImport.update({
+  id: '/portals',
+  path: '/portals',
+  getParentRoute: () => AppRouteRoute,
+} as any)
 const AppFormsRoute = AppFormsRouteImport.update({
   id: '/forms',
   path: '/forms',
+  getParentRoute: () => AppRouteRoute,
+} as any)
+const AppFoldersRoute = AppFoldersRouteImport.update({
+  id: '/folders',
+  path: '/folders',
   getParentRoute: () => AppRouteRoute,
 } as any)
 const DesignSystemComponentsIndexRoute =
@@ -485,8 +503,11 @@ const AppMyAccountChar123SlugChar125Route =
 export interface FileRoutesByFullPath {
   '/': typeof AppIndexRoute
   '/design-system': typeof DesignSystemRouteRouteWithChildren
+  '/folders': typeof AppFoldersRoute
   '/forms': typeof AppFormsRoute
+  '/portals': typeof AppPortalsRoute
   '/requests': typeof AppRequestsRoute
+  '/tasks': typeof AppTasksRoute
   '/workflows': typeof AppWorkflowsRoute
   '/login': typeof AuthLoginRoute
   '/sign-in': typeof AuthSignInRoute
@@ -553,8 +574,11 @@ export interface FileRoutesByFullPath {
   '/design-system/components/': typeof DesignSystemComponentsIndexRoute
 }
 export interface FileRoutesByTo {
+  '/folders': typeof AppFoldersRoute
   '/forms': typeof AppFormsRoute
+  '/portals': typeof AppPortalsRoute
   '/requests': typeof AppRequestsRoute
+  '/tasks': typeof AppTasksRoute
   '/workflows': typeof AppWorkflowsRoute
   '/login': typeof AuthLoginRoute
   '/sign-in': typeof AuthSignInRoute
@@ -625,8 +649,11 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/_app': typeof AppRouteRouteWithChildren
   '/design-system': typeof DesignSystemRouteRouteWithChildren
+  '/_app/folders': typeof AppFoldersRoute
   '/_app/forms': typeof AppFormsRoute
+  '/_app/portals': typeof AppPortalsRoute
   '/_app/requests': typeof AppRequestsRoute
+  '/_app/tasks': typeof AppTasksRoute
   '/_app/workflows': typeof AppWorkflowsRoute
   '/_auth/login': typeof AuthLoginRoute
   '/_auth/sign-in': typeof AuthSignInRoute
@@ -698,8 +725,11 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/design-system'
+    | '/folders'
     | '/forms'
+    | '/portals'
     | '/requests'
+    | '/tasks'
     | '/workflows'
     | '/login'
     | '/sign-in'
@@ -766,8 +796,11 @@ export interface FileRouteTypes {
     | '/design-system/components/'
   fileRoutesByTo: FileRoutesByTo
   to:
+    | '/folders'
     | '/forms'
+    | '/portals'
     | '/requests'
+    | '/tasks'
     | '/workflows'
     | '/login'
     | '/sign-in'
@@ -837,8 +870,11 @@ export interface FileRouteTypes {
     | '__root__'
     | '/_app'
     | '/design-system'
+    | '/_app/folders'
     | '/_app/forms'
+    | '/_app/portals'
     | '/_app/requests'
+    | '/_app/tasks'
     | '/_app/workflows'
     | '/_auth/login'
     | '/_auth/sign-in'
@@ -978,6 +1014,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppWorkflowsRouteImport
       parentRoute: typeof AppRouteRoute
     }
+    '/_app/tasks': {
+      id: '/_app/tasks'
+      path: '/tasks'
+      fullPath: '/tasks'
+      preLoaderRoute: typeof AppTasksRouteImport
+      parentRoute: typeof AppRouteRoute
+    }
     '/_app/requests': {
       id: '/_app/requests'
       path: '/requests'
@@ -985,11 +1028,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppRequestsRouteImport
       parentRoute: typeof AppRouteRoute
     }
+    '/_app/portals': {
+      id: '/_app/portals'
+      path: '/portals'
+      fullPath: '/portals'
+      preLoaderRoute: typeof AppPortalsRouteImport
+      parentRoute: typeof AppRouteRoute
+    }
     '/_app/forms': {
       id: '/_app/forms'
       path: '/forms'
       fullPath: '/forms'
       preLoaderRoute: typeof AppFormsRouteImport
+      parentRoute: typeof AppRouteRoute
+    }
+    '/_app/folders': {
+      id: '/_app/folders'
+      path: '/folders'
+      fullPath: '/folders'
+      preLoaderRoute: typeof AppFoldersRouteImport
       parentRoute: typeof AppRouteRoute
     }
     '/design-system/components/': {
@@ -1402,16 +1459,22 @@ declare module '@tanstack/react-router' {
 }
 
 interface AppRouteRouteChildren {
+  AppFoldersRoute: typeof AppFoldersRoute
   AppFormsRoute: typeof AppFormsRoute
+  AppPortalsRoute: typeof AppPortalsRoute
   AppRequestsRoute: typeof AppRequestsRoute
+  AppTasksRoute: typeof AppTasksRoute
   AppWorkflowsRoute: typeof AppWorkflowsRoute
   AppIndexRoute: typeof AppIndexRoute
   AppMyAccountChar123SlugChar125Route: typeof AppMyAccountChar123SlugChar125Route
 }
 
 const AppRouteRouteChildren: AppRouteRouteChildren = {
+  AppFoldersRoute: AppFoldersRoute,
   AppFormsRoute: AppFormsRoute,
+  AppPortalsRoute: AppPortalsRoute,
   AppRequestsRoute: AppRequestsRoute,
+  AppTasksRoute: AppTasksRoute,
   AppWorkflowsRoute: AppWorkflowsRoute,
   AppIndexRoute: AppIndexRoute,
   AppMyAccountChar123SlugChar125Route: AppMyAccountChar123SlugChar125Route,

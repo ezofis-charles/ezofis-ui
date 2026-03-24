@@ -24,7 +24,7 @@ export const PaginationItemsPerPage = ({
         className,
       )}
     >
-      <div className='text-sm text-gray-11'>{itemLabel} per page:</div>
+      <div className='text-micro text-gray-11'>{itemLabel} per page:</div>
       <Menu
         width='target'
         target={

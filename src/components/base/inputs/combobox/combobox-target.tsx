@@ -74,7 +74,7 @@ const ComboboxTarget = forwardRef<HTMLButtonElement, Props>(
 
       if (variant === 'single') {
         return (
-          <div className='text-sm font-medium text-gray-12'>
+          <div className='text-micro font-medium text-gray-12'>
             {firstValue?.name}
           </div>
         )
@@ -82,11 +82,11 @@ const ComboboxTarget = forwardRef<HTMLButtonElement, Props>(
 
       return (
         <div className='flex items-center gap-1 py-1'>
-          <div className='truncate rounded bg-gray-4 px-2 py-0.5 text-sm font-medium whitespace-nowrap text-gray-12'>
+          <div className='truncate rounded bg-gray-4 px-2 py-0.5 text-micro font-medium whitespace-nowrap text-gray-12'>
             {firstValue?.name}
           </div>
           {counter && (
-            <div className='rounded bg-gray-4 px-2 py-0.5 text-sm font-medium whitespace-nowrap text-gray-12'>
+            <div className='rounded bg-gray-4 px-2 py-0.5 text-micro font-medium whitespace-nowrap text-gray-12'>
               +{counter}
             </div>
           )}

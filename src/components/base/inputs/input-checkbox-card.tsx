@@ -60,7 +60,7 @@ export const InputCheckboxCard = ({
             <InputCheckboxIndicator checked={checked} />
           </div>
 
-          <div className='flex-1 space-y-1 text-sm'>
+          <div className='flex-1 space-y-1 text-micro'>
             {labelSlot}
             {label && (
               <div

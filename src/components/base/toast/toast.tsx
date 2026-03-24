@@ -30,8 +30,8 @@ export const Toast = ({ description, id, title, variant = 'info' }: Props) => {
       </div>
 
       <div className='mr-3 flex-1'>
-        <p className='text-sm/5 font-medium text-gray-13'>{title}</p>
-        <p className='text-sm/5 text-gray-11'>{description}</p>
+        <p className='text-micro/5 font-medium text-gray-13'>{title}</p>
+        <p className='text-micro/5 text-gray-11'>{description}</p>
       </div>
 
       <ButtonClose size='sm' onClick={() => sonnerToast.dismiss(id)} />

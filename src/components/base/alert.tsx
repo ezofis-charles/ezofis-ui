@@ -33,7 +33,7 @@ export const Alert = ({ className, color = 'primary', text }: Props) => {
       )}
     >
       <Icon name={colorIconNames[color]} />
-      <div className='text-sm font-medium'>{text}</div>
+      <div className='text-micro font-medium'>{text}</div>
     </div>
   )
 }

@@ -91,6 +91,7 @@ function RouteComponent() {
           <ButtonIcon icon='lucide:download' size='sm' />
           <ButtonIcon icon='lucide:download' />
           <ButtonIcon icon='lucide:download' size='lg' />
+          <ButtonIcon icon='lucide:download' size='xl' />
         </div>
       </Section>
     </>

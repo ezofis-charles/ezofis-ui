@@ -6,13 +6,13 @@ import { SidebarToggle } from './components/sidebar-toggle'
 
 export const Topbar = () => {
   return (
-    <header className='flex h-12 items-center justify-between px-3 lg:px-5'>
+    <header className='flex h-12 items-center justify-between pr-3 pl-4 lg:px-5'>
       <div className='flex items-center gap-2'>
         <SidebarToggle />
         <PageTitle />
       </div>
 
-      <div className='flex items-center gap-1.5'>
+      <div className='flex items-center gap-2 lg:gap-1'>
         <GlobalSearch />
         <Notifications />
         <AiChatBarToggle />

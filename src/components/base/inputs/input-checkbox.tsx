@@ -25,14 +25,17 @@ const InputCheckbox = forwardRef<HTMLInputElement, Props>(
         ref={ref}
         size='xs'
         classNames={{
-          description: 'mt-1 pl-2 text-sm text-gray-10',
+          description: 'mt-1 pl-2 text-micro text-gray-10',
           icon: 'w-[50%] text-white',
           inner: 'flex size-5 items-center justify-center',
           input: cn(
             'data-[indeterminate]:border-primary rounded-[3px] border-gray-8 bg-surface-raised checked:border-primary-9 checked:bg-primary-9 focus-within:outline-primary-8 disabled:opacity-50 data-[indeterminate]:border-primary-9 data-[indeterminate]:bg-primary-9',
             Boolean(error) && 'border-red-9',
           ),
-          label: cn('pl-2 text-sm/5 font-medium text-gray-12', labelClassName),
+          label: cn(
+            'pl-2 text-micro/5 font-medium text-gray-12',
+            labelClassName,
+          ),
         }}
         onChange={handleChange}
       />

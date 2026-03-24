@@ -28,7 +28,7 @@ export const TreeNode = (props: TreeView.NodeProviderProps<Node>) => {
                       <Icon name='lucide:folder' />
                     )}
                   </div>
-                  <div className='text-sm font-medium text-gray-12'>
+                  <div className='text-micro font-medium text-gray-12'>
                     {node.name}
                   </div>
                 </TreeView.BranchText>
@@ -50,7 +50,7 @@ export const TreeNode = (props: TreeView.NodeProviderProps<Node>) => {
                 <div className='flex size-5 items-center justify-center text-gray-10'>
                   <Icon name='lucide:file' />
                 </div>
-                <div className='text-sm font-medium text-gray-12'>
+                <div className='text-micro font-medium text-gray-12'>
                   {node.name}
                 </div>
               </TreeView.ItemText>
