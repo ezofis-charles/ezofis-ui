@@ -22,7 +22,7 @@ export const Menu = ({ menuGroup }: Props) => {
   const isSidebarOpen = useSidebarStore((state) => state.isSidebarOpen)
 
   return (
-    <ScrollArea style={{ height: 'calc(100dvh - 108px)' }}>
+    <ScrollArea style={{ height: 'calc(100dvh - 104px)' }}>
       <nav className='py-2'>
         {menuGroup.map((group, index) => (
           <div key={group.label}>

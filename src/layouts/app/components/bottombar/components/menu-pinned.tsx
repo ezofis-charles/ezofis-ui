@@ -17,9 +17,10 @@ export const MenuPinned = ({ menu }: Props) => {
     <>
       {pinned.map((item) => (
         <Link
+          key={item.route}
           to={item.route}
           className={cn(
-            'group flex size-10 items-center justify-center rounded hover:bg-gray-4',
+            'group flex size-10 items-center justify-center rounded outline-primary-8 hover:bg-gray-4',
             pathname === item.route && 'bg-gray-4',
           )}
         >

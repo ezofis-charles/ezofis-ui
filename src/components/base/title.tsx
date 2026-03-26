@@ -21,7 +21,7 @@ export const Title = ({
     <div className={cn('min-w-0 space-y-1', className)}>
       {level === 1 && (
         <h1
-          className={cn('text-xl/8 font-semibold text-gray-13', titleClassName)}
+          className={cn('text-lg/8 font-semibold text-gray-13', titleClassName)}
         >
           {title}
         </h1>
@@ -29,7 +29,7 @@ export const Title = ({
 
       {level === 2 && (
         <h2
-          className={cn('text-base font-semibold text-gray-13', titleClassName)}
+          className={cn('text-mini font-semibold text-gray-13', titleClassName)}
         >
           {title}
         </h2>
@@ -37,7 +37,10 @@ export const Title = ({
 
       {level === 3 && (
         <h3
-          className={cn('text-md/6 font-semibold text-gray-13', titleClassName)}
+          className={cn(
+            'text-micro font-semibold text-gray-13',
+            titleClassName,
+          )}
         >
           {title}
         </h3>

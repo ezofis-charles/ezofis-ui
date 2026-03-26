@@ -17,7 +17,7 @@ export const Sidebar = ({ menuGroup }: Props) => {
   return (
     <motion.div
       animate={{ width }}
-      className='pt-1 pb-2'
+      className='py-1'
       initial={{ width }}
       transition={{ duration: 0.15 }}
     >
