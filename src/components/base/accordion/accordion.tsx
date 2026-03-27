@@ -6,7 +6,7 @@ import { cn } from '@/utils/cn'
 interface Props {
   children?: ReactNode
   className?: string
-  defaultOpened?: null | string | string[]
+  defaultOpen?: null | string | string[]
   multiple?: boolean
   variant?: 'contained' | 'default' | 'separated'
 }
@@ -14,7 +14,7 @@ interface Props {
 export const Accordion = ({
   children,
   className,
-  defaultOpened,
+  defaultOpen,
   multiple,
   variant = 'default',
 }: Props) => {
@@ -28,7 +28,7 @@ export const Accordion = ({
     <Base
       chevron={<Icon className='text-gray-10' name='lucide:chevron-down' />}
       className={className}
-      defaultValue={defaultOpened}
+      defaultValue={defaultOpen}
       multiple={multiple}
       variant={variant}
       classNames={{

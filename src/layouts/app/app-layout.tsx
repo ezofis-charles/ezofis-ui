@@ -2,7 +2,6 @@ import type { ReactNode } from 'react'
 import { useLingui } from '@lingui/react/macro'
 import { SCREEN_SIZE } from '@/constants'
 import { useViewportSize } from '@/hooks/use-viewport-size'
-import { cn } from '@/utils/cn'
 import type { MenuGroup } from './app-layout.types'
 import { AiBar } from './components/ai-bar'
 import { Bottombar } from './components/bottombar'
@@ -69,24 +68,16 @@ export const AppLayout = ({ children }: Props) => {
       label: 'Modules',
     },
   ]
+
   const { width } = useViewportSize()
-  const isLargeScreen = width > SCREEN_SIZE.MD
+  const isLargeScreen = width > SCREEN_SIZE.SM
 
   return (
     <div className='flex max-h-dvh min-h-dvh overflow-hidden'>
-      {isLargeScreen ? (
-        <Sidebar menuGroup={menuGroup} />
-      ) : (
-        <Bottombar menuGroup={menuGroup} />
-      )}
+      {isLargeScreen ? <Sidebar /> : <Bottombar menuGroup={menuGroup} />}
 
-      <div className={cn('flex flex-1', isLargeScreen && 'py-1 pr-1')}>
-        <div
-          className={cn(
-            'flex-1 bg-surface',
-            isLargeScreen && 'rounded-xl border border-gray-3',
-          )}
-        >
+      <div className='flex flex-1 xl:py-1 xl:pr-1'>
+        <div className='flex-1 bg-surface xl:rounded-xl xl:border xl:border-gray-3'>
           <Topbar />
           {children}
         </div>

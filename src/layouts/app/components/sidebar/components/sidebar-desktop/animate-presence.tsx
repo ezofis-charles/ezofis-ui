@@ -9,11 +9,11 @@ interface Props {
 }
 
 export const AnimatePresence = ({ children, className }: Props) => {
-  const isSidebarOpen = useSidebarStore((state) => state.isSidebarOpen)
+  const sidebarState = useSidebarStore((state) => state.sidebarState)
 
   return (
     <Base initial={false}>
-      {isSidebarOpen && (
+      {sidebarState === 'expanded' && (
         <motion.div
           animate={{ opacity: 1, width: 'auto' }}
           className={cn('overflow-hidden', className)}

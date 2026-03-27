@@ -9,9 +9,9 @@ interface Props {
   className?: string
   closeOnClickOutside?: boolean
   closeOnItemClick?: boolean
-  defaultOpened?: boolean
+  defaultOpen?: boolean
   offset?: BaseProps['offset']
-  opened?: boolean
+  open?: boolean
   position?: BaseProps['position']
   width?: BaseProps['width']
   withinPortal?: BaseProps['withinPortal']
@@ -23,6 +23,8 @@ export const Menu = ({
   className,
   closeOnClickOutside = true,
   closeOnItemClick = true,
+  defaultOpen,
+  open,
   target,
   ...rest
 }: Props) => {
@@ -31,6 +33,8 @@ export const Menu = ({
       {...rest}
       closeOnClickOutside={closeOnClickOutside}
       closeOnItemClick={closeOnItemClick}
+      defaultOpened={defaultOpen}
+      opened={open}
       transitionProps={{ transition: 'pop' }}
       returnFocus
       classNames={{

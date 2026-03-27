@@ -1,16 +1,12 @@
-import type { ReactNode } from 'react'
 import { useNavigate } from '@tanstack/react-router'
 import { Menu } from '@/components/base/menu'
 import { useSidebarStore } from '@/layouts/app/stores/use-sidebar-store-copy'
-import { LanguageSwitcher } from './language-switcher'
-import { ThemeSwitcher } from './theme-switcher'
-import { UserInfo } from './user-info'
+import { LanguageToggle } from './components/language-toggle'
+import { ThemeToggle } from './components/theme-toggle'
+import { User } from './components/user'
+import { UserMenuTrigger } from './components/user-menu-trigger'
 
-interface Props {
-  trigger: ReactNode
-}
-
-export const UserMenu = ({ trigger }: Props) => {
+export const UserMenu = () => {
   const navigate = useNavigate()
   const isSidebarOpen = useSidebarStore((state) => state.isSidebarOpen)
 
@@ -26,10 +22,10 @@ export const UserMenu = ({ trigger }: Props) => {
     <Menu
       offset={{ alignmentAxis: 8, mainAxis: isSidebarOpen ? 8 : 0 }}
       position='top-start'
-      target={trigger}
+      target={<UserMenuTrigger />}
       width={224}
     >
-      <UserInfo />
+      <User />
       <Menu.Divider />
       <Menu.Item
         icon='tabler:user'
@@ -47,8 +43,8 @@ export const UserMenu = ({ trigger }: Props) => {
         onClick={() => goto('preferences')}
       />
       <Menu.Divider />
-      <ThemeSwitcher />
-      <LanguageSwitcher />
+      <ThemeToggle />
+      <LanguageToggle />
       <Menu.Divider />
       <Menu.Item
         icon='material-symbols:logout-rounded'

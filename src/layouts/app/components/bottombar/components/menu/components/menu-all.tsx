@@ -14,7 +14,7 @@ export const MenuAll = ({ menu }: Props) => {
   })
 
   return (
-    <ul className='space-y-1 px-4 py-2'>
+    <ul className='space-y-1 px-4 py-2.5'>
       {menu.map((item) => (
         <li className='flex items-center gap-4' key={item.label}>
           <Link

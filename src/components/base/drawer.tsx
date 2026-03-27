@@ -4,7 +4,7 @@ import { cn } from '@/utils/cn'
 
 interface Props {
   children: ReactNode
-  opened: boolean
+  open: boolean
   closeOnInteractOutside?: boolean
   offset?: number
   position?: 'left' | 'right'
@@ -17,7 +17,7 @@ export const Drawer = ({
   children,
   closeOnInteractOutside = true,
   offset = 8,
-  opened,
+  open,
   position = 'right',
   width = 420,
   withOverlay = false,
@@ -26,8 +26,8 @@ export const Drawer = ({
   const classNames = {
     body: 'p-0',
     content: cn(
-      'rounded-xl border border-gray-4 bg-surface',
-      offset && 'shadow-xl',
+      'bg-surface',
+      offset !== 0 && 'rounded-xl border border-gray-4 shadow-xl',
     ),
     overlay: 'bg-black/40',
   }
@@ -38,7 +38,7 @@ export const Drawer = ({
       closeOnClickOutside={closeOnInteractOutside}
       closeOnEscape={closeOnInteractOutside}
       offset={offset}
-      opened={opened}
+      opened={open}
       position={position}
       size={width}
       trapFocus={false}

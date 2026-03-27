@@ -10,7 +10,7 @@ interface Props {
 export const MenuItem = ({ activeIcon, icon, isActive, label }: Props) => {
   return (
     <div className={'flex items-center'}>
-      <div className='flex size-11 items-center justify-center'>
+      <div className='flex size-10 items-center justify-center'>
         <Icon
           name={isActive && activeIcon ? activeIcon : icon}
           className={
@@ -21,7 +21,7 @@ export const MenuItem = ({ activeIcon, icon, isActive, label }: Props) => {
         />
       </div>
 
-      <div className='flex-1 text-base font-medium whitespace-nowrap text-gray-12 group-hover:text-gray-13'>
+      <div className='flex-1 text-mini/6 font-medium whitespace-nowrap text-gray-12 group-hover:text-gray-13'>
         {label}
       </div>
     </div>

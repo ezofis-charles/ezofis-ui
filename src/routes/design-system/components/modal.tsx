@@ -11,7 +11,7 @@ export const Route = createFileRoute('/design-system/components/modal')({
 })
 
 function RouteComponent() {
-  const [opened, setOpened] = useState(false)
+  const [open, setOpen] = useState(false)
 
   return (
     <>
@@ -22,17 +22,17 @@ function RouteComponent() {
           color='gray'
           label='Open'
           variant='outline'
-          onClick={() => setOpened(true)}
+          onClick={() => setOpen(true)}
         />
 
-        <Modal opened={opened} onClose={() => setOpened(false)}>
-          <Overlay.Header title='Modal' onClose={() => setOpened(false)} />
+        <Modal open={open} onClose={() => setOpen(false)}>
+          <Overlay.Header title='Modal' onClose={() => setOpen(false)} />
           <Overlay.Content className='h-60'>
             <></>
           </Overlay.Content>
           <Overlay.Footer
-            onCancel={() => setOpened(false)}
-            onSave={() => setOpened(false)}
+            onCancel={() => setOpen(false)}
+            onSave={() => setOpen(false)}
           />
         </Modal>
       </Section>

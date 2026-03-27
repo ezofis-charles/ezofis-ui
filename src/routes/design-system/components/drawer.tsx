@@ -11,10 +11,10 @@ export const Route = createFileRoute('/design-system/components/drawer')({
 })
 
 function RouteComponent() {
-  const [opened, setOpened] = useState(false)
+  const [open, setOpen] = useState(false)
   const [openLeft, setOpenLeft] = useState(false)
   const [openRight, setOpenRight] = useState(false)
-  const [openedWithoutOverlay, setOpenedWithoutOverlay] = useState(false)
+  const [openWithoutOverlay, setOpenWithoutOverlay] = useState(false)
 
   return (
     <>
@@ -25,17 +25,17 @@ function RouteComponent() {
           color='gray'
           label='Open'
           variant='outline'
-          onClick={() => setOpened(true)}
+          onClick={() => setOpen(true)}
         />
 
-        <Drawer opened={opened} withOverlay onClose={() => setOpened(false)}>
-          <Overlay.Header title='Drawer' onClose={() => setOpened(false)} />
+        <Drawer open={open} withOverlay onClose={() => setOpen(false)}>
+          <Overlay.Header title='Drawer' onClose={() => setOpen(false)} />
           <Overlay.Content style={{ height: 'calc(100dvh - 126px' }}>
             <></>
           </Overlay.Content>
           <Overlay.Footer
-            onCancel={() => setOpened(false)}
-            onSave={() => setOpened(false)}
+            onCancel={() => setOpen(false)}
+            onSave={() => setOpen(false)}
           />
         </Drawer>
       </Section>
@@ -59,7 +59,7 @@ function RouteComponent() {
         </div>
 
         <Drawer
-          opened={openLeft}
+          open={openLeft}
           position='left'
           withOverlay
           onClose={() => setOpenLeft(false)}
@@ -68,7 +68,7 @@ function RouteComponent() {
         </Drawer>
 
         <Drawer
-          opened={openRight}
+          open={openRight}
           withOverlay
           onClose={() => setOpenRight(false)}
         >
@@ -81,12 +81,12 @@ function RouteComponent() {
           color='gray'
           label='Open'
           variant='outline'
-          onClick={() => setOpenedWithoutOverlay(true)}
+          onClick={() => setOpenWithoutOverlay(true)}
         />
 
         <Drawer
-          opened={openedWithoutOverlay}
-          onClose={() => setOpenedWithoutOverlay(false)}
+          open={openWithoutOverlay}
+          onClose={() => setOpenWithoutOverlay(false)}
         >
           <></>
         </Drawer>

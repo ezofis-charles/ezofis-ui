@@ -3,7 +3,7 @@ import type { MenuItem as MenuItemType } from '@/layouts/app/app-layout.types'
 import { Icon } from '@/components/base/icon'
 import { Tooltip } from '@/components/base/tooltip'
 import { TOOLTIP_DELAY } from '@/constants'
-import { useSidebarStore } from '@/layouts/app/stores/use-sidebar-store'
+import { useSidebarStore } from '@/layouts/app/stores/use-sidebar-store-copy'
 import { cn } from '@/utils/cn'
 import { AnimatePresence } from '../animate-presence'
 

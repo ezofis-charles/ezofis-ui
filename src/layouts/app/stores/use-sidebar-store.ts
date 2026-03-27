@@ -1,16 +1,18 @@
 import { create } from 'zustand'
+import type { SidebarState } from '../components/sidebar/sidebar.types'
 
 type Store = {
-  isSidebarOpen: boolean
-  closeSidebar: () => void
-  openSidebar: () => void
+  sidebarState: SidebarState
+  setSidebarState: (state: SidebarState) => void
   toggleSidebar: () => void
 }
 
 export const useSidebarStore = create<Store>()((set) => ({
-  isSidebarOpen: false,
-  closeSidebar: () => set({ isSidebarOpen: false }),
-  openSidebar: () => set({ isSidebarOpen: true }),
+  sidebarState: 'collapsed',
   toggleSidebar: () =>
-    set((state) => ({ isSidebarOpen: !state.isSidebarOpen })),
+    set((state) => ({
+      sidebarState:
+        state.sidebarState === 'collapsed' ? 'expanded' : 'collapsed',
+    })),
+  setSidebarState: (state: SidebarState) => set({ sidebarState: state }),
 }))

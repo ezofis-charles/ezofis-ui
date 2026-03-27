@@ -3,6 +3,8 @@ import type { ReactNode } from 'react'
 import { Tooltip as Base } from '@mantine/core'
 import { cn } from '@/utils/cn'
 
+export type TooltipPosition = BaseProps['position']
+
 interface Props {
   children: ReactNode
   content: string
@@ -10,9 +12,9 @@ interface Props {
   color?: TooltipColor
   disabled?: boolean
   offset?: BaseProps['offset']
+  open?: boolean
   openDelay?: number
-  opened?: boolean
-  position?: BaseProps['position']
+  position?: TooltipPosition
   width?: number
   withArrow?: boolean
 }
@@ -33,8 +35,8 @@ export const Tooltip = ({
   content,
   disabled,
   offset,
+  open,
   openDelay = 0,
-  opened,
   position,
   width,
   withArrow,
@@ -45,7 +47,7 @@ export const Tooltip = ({
       arrowRadius={1.5}
       arrowSize={6}
       closeDelay={closeDelay}
-      defaultOpened={opened}
+      defaultOpened={open}
       disabled={disabled}
       label={content}
       multiline={!!width}

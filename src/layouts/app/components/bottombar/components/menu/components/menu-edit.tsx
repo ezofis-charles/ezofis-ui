@@ -11,7 +11,7 @@ export const MenuEdit = ({ menu }: Props) => {
   // console.log(setMenu)
 
   return (
-    <div className='px-4 py-2'>
+    <div className='px-4 py-2.5'>
       <Item
         icon='material-symbols:edit-square-outline-rounded'
         label='Customize'

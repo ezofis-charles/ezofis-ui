@@ -9,14 +9,14 @@ export const User = () => {
         image={avatar}
         imageLabel='user picture'
         initials='CV'
-        size={44}
+        size={40}
       />
 
       <div className='min-w-0 flex-1'>
-        <div className='truncate text-base font-medium text-gray-13'>
+        <div className='truncate text-mini/6 font-medium text-gray-13'>
           Charles Vinoth
         </div>
-        <div className='truncate text-sm/6'>charles@ezofis.com</div>
+        <div className='truncate text-micro/5'>charles@ezofis.com</div>
       </div>
 
       <ButtonIcon

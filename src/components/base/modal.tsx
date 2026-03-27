@@ -4,7 +4,7 @@ import { cn } from '@/utils/cn'
 
 interface Props {
   children: ReactNode
-  opened: boolean
+  open: boolean
   closeOnInteractOutside?: boolean
   fullScreen?: boolean
   width?: number | string
@@ -15,7 +15,7 @@ export const Modal = ({
   children,
   closeOnInteractOutside = true,
   fullScreen,
-  opened,
+  open,
   width,
   onClose,
 }: Props) => {
@@ -34,7 +34,7 @@ export const Modal = ({
       closeOnClickOutside={closeOnInteractOutside}
       closeOnEscape={closeOnInteractOutside}
       fullScreen={fullScreen}
-      opened={opened}
+      opened={open}
       size={width}
       withCloseButton={false}
       centered

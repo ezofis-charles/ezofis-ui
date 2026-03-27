@@ -86,8 +86,8 @@ function RouteComponent() {
         </Accordion>
       </Section>
 
-      <Section title='Default Opened'>
-        <Accordion className='max-w-80' defaultOpened={['item-2']}>
+      <Section title='Default Open'>
+        <Accordion className='max-w-80' defaultOpen={['item-2']}>
           {items.map((item) => (
             <Accordion.Item
               key={item.value}

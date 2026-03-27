@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from 'motion/react'
 import type { MenuGroup } from '@/layouts/app/app-layout.types'
 import { Divider } from '@/components/base/divider'
 import { ScrollArea } from '@/components/base/scroll-area'
-import { useSidebarStore } from '@/layouts/app/stores/use-sidebar-store'
+import { useSidebarStore } from '@/layouts/app/stores/use-sidebar-store-copy'
 import { cn } from '@/utils/cn'
 import { MenuItem } from './menu-item'
 

@@ -2,7 +2,7 @@ import { ButtonIcon } from '@/components/base/button'
 import { Indicator } from '@/components/base/indicator'
 import { Tooltip } from '@/components/base/tooltip'
 import { TOOLTIP_DELAY } from '@/constants'
-import { useSidebarStore } from '@/layouts/app/stores/use-sidebar-store'
+import { useSidebarStore } from '@/layouts/app/stores/use-sidebar-store-copy'
 
 export const NotificationsTrigger = () => {
   const isSidebarOpen = useSidebarStore((state) => state.isSidebarOpen)
