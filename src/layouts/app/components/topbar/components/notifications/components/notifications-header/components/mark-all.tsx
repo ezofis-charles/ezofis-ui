@@ -7,7 +7,7 @@ export const MarkAll = () => {
       <ButtonIcon
         ariaLabel='mark all as read'
         color='gray'
-        icon='lucide:check-check'
+        icon='tabler:check-check'
         variant='ghost'
       />
     </Tooltip>

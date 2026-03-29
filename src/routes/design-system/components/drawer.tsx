@@ -44,7 +44,7 @@ function RouteComponent() {
         <div className='flex items-center gap-2'>
           <Button
             color='gray'
-            icon='lucide:arrow-left'
+            icon='tabler:arrow-left'
             label='Left'
             variant='outline'
             onClick={() => setOpenLeft(true)}
@@ -52,7 +52,7 @@ function RouteComponent() {
           <Button
             color='gray'
             label='Right'
-            suffixIcon='lucide:arrow-right'
+            suffixIcon='tabler:arrow-right'
             variant='outline'
             onClick={() => setOpenRight(true)}
           />

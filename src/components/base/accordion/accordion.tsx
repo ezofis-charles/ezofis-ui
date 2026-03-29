@@ -26,7 +26,7 @@ export const Accordion = ({
 
   return (
     <Base
-      chevron={<Icon className='text-gray-10' name='lucide:chevron-down' />}
+      chevron={<Icon className='text-gray-10' name='tabler:chevron-down' />}
       className={className}
       defaultValue={defaultOpen}
       multiple={multiple}

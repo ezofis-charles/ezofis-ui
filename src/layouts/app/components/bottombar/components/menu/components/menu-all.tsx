@@ -32,7 +32,7 @@ export const MenuAll = ({ menu }: Props) => {
             />
 
             <div className='hidden size-11 items-center justify-center'>
-              <Icon className='text-gray-9' name='lucide:grip-vertical' />
+              <Icon className='text-gray-9' name='tabler:grip-vertical' />
             </div>
           </Link>
         </li>

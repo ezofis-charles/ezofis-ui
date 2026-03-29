@@ -36,8 +36,8 @@ function RouteComponent() {
 
       <Section title='With Icons'>
         <div className='flex flex-wrap items-center gap-2'>
-          <Button icon='lucide:plus' label='Button' />
-          <Button label='Button' suffixIcon='lucide:plus' />
+          <Button icon='tabler:plus' label='Button' />
+          <Button label='Button' suffixIcon='tabler:plus' />
         </div>
       </Section>
 

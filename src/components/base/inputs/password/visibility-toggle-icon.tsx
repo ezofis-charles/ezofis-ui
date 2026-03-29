@@ -8,7 +8,7 @@ export const VisibilityToggleIcon = ({ reveal }: Props) => {
   return (
     <Icon
       className='text-gray-11 group-hover:text-gray-12'
-      name={reveal ? 'lucide:eye-off' : 'lucide:eye'}
+      name={reveal ? 'tabler:eye-off' : 'tabler:eye'}
     />
   )
 }

@@ -13,7 +13,7 @@ type Store = {
 
 export const useSessionStore = create<Store>((set) => ({
   user: {
-    avatar: 'https://i.pravatar.cc/150?img=12',
+    avatar: 'https://i.pravatar.cc/150?img=13',
     email: 'charles@ezofis.com',
     id: '1',
     name: 'Charles Vinoth',

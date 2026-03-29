@@ -17,10 +17,10 @@ const colorClassNames: Record<IconColor, string> = {
 }
 
 const colorIconNames: Record<IconColor, string> = {
-  green: 'lucide:circle-check',
-  primary: 'lucide:info',
-  red: 'lucide:triangle-alert',
-  secondary: 'lucide:info',
+  green: 'tabler:circle-check',
+  primary: 'tabler:info-circle',
+  red: 'tabler:alert-hexagon',
+  secondary: 'tabler:info-circle',
 }
 
 export const Alert = ({ className, color = 'primary', text }: Props) => {

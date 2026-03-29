@@ -72,14 +72,14 @@ export const Pagination = ({
           <ButtonIcon
             color='gray'
             disabled={page === 1}
-            icon='lucide:chevron-left'
+            icon='tabler:chevron-left'
             variant='outline'
             onClick={() => onPageChange(page - 1)}
           />
           <ButtonIcon
             color='gray'
             disabled={page === totalPages}
-            icon='lucide:chevron-right'
+            icon='tabler:chevron-right'
             variant='outline'
             onClick={() => onPageChange(page + 1)}
           />

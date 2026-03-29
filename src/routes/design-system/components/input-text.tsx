@@ -85,7 +85,7 @@ function RouteComponent() {
       <Section title='Left Section'>
         <InputText
           className='max-w-80'
-          leftSection={<Icon className='text-gray-9' name='lucide:search' />}
+          leftSection={<Icon className='text-gray-9' name='tabler:search' />}
           value={value}
           onChange={setValue}
         />
@@ -94,7 +94,7 @@ function RouteComponent() {
       <Section title='Right Section'>
         <InputText
           className='max-w-80'
-          rightSection={<Icon className='text-gray-9' name='lucide:calendar' />}
+          rightSection={<Icon className='text-gray-9' name='tabler:calendar' />}
           rightSectionPointerEvents='auto'
           value={value}
           onChange={setValue}

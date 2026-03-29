@@ -13,6 +13,7 @@ interface Props {
   offset?: BaseProps['offset']
   open?: boolean
   position?: BaseProps['position']
+  targetClassName?: string
   width?: BaseProps['width']
   withinPortal?: BaseProps['withinPortal']
   onChange?: BaseProps['onChange']
@@ -26,6 +27,7 @@ export const Menu = ({
   defaultOpen,
   open,
   target,
+  targetClassName,
   ...rest
 }: Props) => {
   return (
@@ -49,7 +51,7 @@ export const Menu = ({
       }}
     >
       <Base.Target>
-        <div>{target}</div>
+        <div className={targetClassName}>{target}</div>
       </Base.Target>
       <Base.Dropdown>{children}</Base.Dropdown>
     </Base>

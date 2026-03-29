@@ -7,7 +7,7 @@ export const Search = () => {
       <ButtonIcon
         ariaLabel='search'
         color='gray'
-        icon='lucide:search'
+        icon='tabler:search'
         variant='ghost'
       />
     </Tooltip>

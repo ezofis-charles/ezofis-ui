@@ -14,7 +14,6 @@ export const Sheet = ({ children, open, onClose }: Props) => {
 
   useEffect(() => {
     const unsubscribe = router.subscribe('onBeforeNavigate', onClose)
-
     return unsubscribe
   }, [onClose, router])
 

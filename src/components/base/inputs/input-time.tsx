@@ -55,7 +55,7 @@ const InputTime = forwardRef<HTMLInputElement, Props>(
     const _rightSection = _clearable ? (
       <ButtonClose size='xs' onClick={() => onChange('')} />
     ) : (
-      <Icon className='text-gray-9' name='lucide:clock' />
+      <Icon className='text-gray-9' name='tabler:clock' />
     )
 
     return (

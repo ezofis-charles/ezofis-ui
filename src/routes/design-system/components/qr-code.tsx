@@ -25,7 +25,7 @@ function RouteComponent() {
             <Button
               className='w-full justify-center'
               color='gray'
-              icon='lucide:download'
+              icon='tabler:download'
               label='Download'
               variant='outline'
             />

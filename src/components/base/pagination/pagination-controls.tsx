@@ -28,7 +28,7 @@ export const PaginationControls = ({
         <ButtonIcon
           color='gray'
           disabled={page === 1}
-          icon='lucide:chevron-left'
+          icon='tabler:chevron-left'
           variant='ghost'
           onClick={previous}
         />
@@ -36,7 +36,7 @@ export const PaginationControls = ({
           _page === 'dots' ? (
             <ButtonIcon
               color='gray'
-              icon='lucide:more-horizontal'
+              icon='tabler:dots'
               key={index}
               variant='ghost'
               disabled
@@ -59,7 +59,7 @@ export const PaginationControls = ({
         <ButtonIcon
           color='gray'
           disabled={page === totalPages}
-          icon='lucide:chevron-right'
+          icon='tabler:chevron-right'
           variant='ghost'
           onClick={next}
         />

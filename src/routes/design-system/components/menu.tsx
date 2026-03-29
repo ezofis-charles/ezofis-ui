@@ -16,49 +16,51 @@ function RouteComponent() {
       <Section title='Default'>
         <Menu
           position='bottom-start'
+          targetClassName='inline-block'
           width={160}
           target={
             <Button
               color='gray'
               label='Menu'
-              suffixIcon='lucide:chevron-down'
+              suffixIcon='tabler:chevron-down'
               suffixIconClassName='text-gray-9'
               variant='outline'
             />
           }
         >
-          <Menu.Item icon='lucide:edit' label='Rename' />
-          <Menu.Item icon='lucide:copy' label='Duplicate' />
-          <Menu.Item icon='lucide:archive' label='Archive' />
-          <Menu.Item icon='lucide:share-2' label='Share' />
+          <Menu.Item icon='tabler:edit' label='Rename' />
+          <Menu.Item icon='tabler:copy' label='Duplicate' />
+          <Menu.Item icon='tabler:archive' label='Archive' />
+          <Menu.Item icon='tabler:share' label='Share' />
         </Menu>
       </Section>
 
       <Section title='Menu Group'>
         <Menu
           position='bottom-start'
+          targetClassName='inline-block'
           width={160}
           target={
             <Button
               color='gray'
               label='Menu'
-              suffixIcon='lucide:chevron-down'
+              suffixIcon='tabler:chevron-down'
               suffixIconClassName='text-gray-9'
               variant='outline'
             />
           }
         >
           <Menu.Label>Security</Menu.Label>
-          <Menu.Item icon='lucide:shield' label='Authentication' />
-          <Menu.Item icon='lucide:lock' label='Sessions' />
+          <Menu.Item icon='tabler:shield' label='Authentication' />
+          <Menu.Item icon='tabler:lock' label='Sessions' />
           <Menu.Divider />
           <Menu.Label>Developers</Menu.Label>
-          <Menu.Item icon='lucide:key-round' label='API Keys' />
-          <Menu.Item icon='lucide:webhook' label='Webhooks' />
-          <Menu.Item icon='lucide:circle-help' label='Documentation' />
+          <Menu.Item icon='tabler:key' label='API Keys' />
+          <Menu.Item icon='tabler:webhook' label='Webhooks' />
+          <Menu.Item icon='tabler:help' label='Documentation' />
           <Menu.Divider />
           <Menu.Item
-            icon='lucide:log-out'
+            icon='tabler:logout'
             iconClassName='text-red-11'
             label='Log out'
           />
@@ -68,27 +70,28 @@ function RouteComponent() {
       <Section title='Submenu'>
         <Menu
           position='bottom-start'
+          targetClassName='inline-block'
           width={160}
           target={
             <Button
               color='gray'
               label='Menu'
-              suffixIcon='lucide:chevron-down'
+              suffixIcon='tabler:chevron-down'
               suffixIconClassName='text-gray-9'
               variant='outline'
             />
           }
         >
-          <Menu.Item icon='lucide:edit' label='Rename' />
-          <Menu.Item icon='lucide:copy' label='Duplicate' />
-          <Menu.Sub icon='lucide:shapes' label='More'>
-            <Menu.Item icon='lucide:archive' label='Archive' />
-            <Menu.Item icon='lucide:share-2' label='Share' />
-            <Menu.Item icon='lucide:heart' label='Favourites' />
+          <Menu.Item icon='tabler:edit' label='Rename' />
+          <Menu.Item icon='tabler:copy' label='Duplicate' />
+          <Menu.Sub icon='tabler:triangle-square-circle' label='More'>
+            <Menu.Item icon='tabler:archive' label='Archive' />
+            <Menu.Item icon='tabler:share' label='Share' />
+            <Menu.Item icon='tabler:heart' label='Favourites' />
           </Menu.Sub>
           <Menu.Divider />
           <Menu.Item
-            icon='lucide:trash-2'
+            icon='tabler:trash'
             iconClassName='text-red-11'
             label='Delete'
           />

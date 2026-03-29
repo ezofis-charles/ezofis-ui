@@ -10,21 +10,21 @@ export interface Props {
 }
 
 const iconMap = {
-  error: { className: 'text-red-11', name: 'lucide:octagon-x' },
-  info: { className: 'text-primary-11', name: 'lucide:info' },
+  error: { className: 'text-red-11', name: 'tabler:alert-hexagon' },
+  info: { className: 'text-primary-11', name: 'tabler:info-circle' },
   loading: {
     className: 'text-gray-11 animate-spin',
     name: 'fa:spinner',
   },
-  success: { className: 'text-green-11', name: 'lucide:circle-check' },
-  warning: { className: 'text-orange-11', name: 'lucide:triangle-alert' },
+  success: { className: 'text-green-11', name: 'tabler:circle-check' },
+  warning: { className: 'text-orange-11', name: 'tabler:alert-triangle' },
 }
 
 export const Toast = ({ description, id, title, variant = 'info' }: Props) => {
   const { className, name } = iconMap[variant]
 
   return (
-    <div className='flex items-start gap-3 rounded-lg border border-gray-4 bg-surface-raised p-4 shadow-xl'>
+    <div className='flex items-start gap-2 rounded-lg border border-gray-4 bg-surface-raised p-4 shadow-xl'>
       <div className='flex size-5 items-center justify-center'>
         <Icon className={className} name={name} />
       </div>

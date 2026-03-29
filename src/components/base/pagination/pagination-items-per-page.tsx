@@ -31,7 +31,7 @@ export const PaginationItemsPerPage = ({
           <Button
             color='gray'
             label={pageSize.toString()}
-            suffixIcon='lucide:chevron-down'
+            suffixIcon='tabler:chevron-down'
             suffixIconClassName='text-gray-9'
             variant='outline'
           />

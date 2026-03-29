@@ -92,7 +92,7 @@ export const ComboboxOptions = ({
         {creatable && search && (
           <div onClick={handleCreate}>
             <ComboboxOption
-              icon='lucide:plus'
+              icon='tabler:plus'
               id='0'
               name={`Create "${search}"`}
             />

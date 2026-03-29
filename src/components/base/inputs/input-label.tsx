@@ -33,7 +33,7 @@ export const InputLabel = ({
         <Tooltip content={tooltip} position='top-start' width={tooltipWidth}>
           <Icon
             className='hover:text-gray -mt-0.5 cursor-pointer text-gray-9 transition-colors'
-            name='lucide:circle-help'
+            name='tabler:circle-help'
           />
         </Tooltip>
       )}

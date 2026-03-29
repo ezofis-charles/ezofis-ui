@@ -52,11 +52,11 @@ const InputDate = forwardRef<HTMLInputElement, Props>(
     const _rightSection = _clearable ? (
       <ButtonClose size='xs' onClick={() => onChange(null)} />
     ) : (
-      <Icon className='text-gray-9' name='lucide:calendar' />
+      <Icon className='text-gray-9' name='tabler:calendar' />
     )
 
-    const _previousIcon = <Icon name='lucide:chevron-left' />
-    const _nextIcon = <Icon name='lucide:chevron-right' />
+    const _previousIcon = <Icon name='tabler:chevron-left' />
+    const _nextIcon = <Icon name='tabler:chevron-right' />
 
     return (
       <Base

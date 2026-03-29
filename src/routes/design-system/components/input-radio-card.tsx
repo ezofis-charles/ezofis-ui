@@ -43,7 +43,7 @@ function RouteComponent() {
           <InputRadioCard
             checked={value === 1}
             description='Lorem ipsum dolor sit'
-            icon='lucide:smartphone'
+            icon='tabler:smartphone'
             label='Label'
             onClick={() => setValue(1)}
           />

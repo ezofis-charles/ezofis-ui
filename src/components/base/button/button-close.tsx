@@ -13,7 +13,7 @@ export const ButtonClose = ({ className, size, onClick }: Props) => {
       ariaLabel='Close'
       className={className}
       color='gray'
-      icon='lucide:x'
+      icon='tabler:x'
       size={size}
       variant='ghost'
       onClick={onClick}

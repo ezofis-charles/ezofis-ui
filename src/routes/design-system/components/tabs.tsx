@@ -33,9 +33,9 @@ function RouteComponent() {
 
       <Section title='With Icon'>
         <Tabs value={value} onChange={setValue}>
-          <Tabs.Tab icon='lucide:home' label='Home' value='tab1' />
-          <Tabs.Tab icon='lucide:user' label='Users' value='tab2' />
-          <Tabs.Tab icon='lucide:settings' label='Settings' value='tab3' />
+          <Tabs.Tab icon='tabler:home' label='Home' value='tab1' />
+          <Tabs.Tab icon='tabler:user' label='Users' value='tab2' />
+          <Tabs.Tab icon='tabler:settings' label='Settings' value='tab3' />
         </Tabs>
       </Section>
 

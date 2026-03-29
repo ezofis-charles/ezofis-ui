@@ -18,18 +18,20 @@ export const ThemeSwitcher = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const menuTrigger = (
-    <Tooltip
-      content={t`Change theme`}
-      disabled={isMenuOpen}
-      openDelay={TOOLTIP_DELAY}
-    >
-      <ButtonIcon
-        ariaLabel='Change theme'
-        color='gray'
-        icon={selectedColorScheme.icon}
-        variant='ghost'
-      />
-    </Tooltip>
+    <div>
+      <Tooltip
+        content={t`Change theme`}
+        disabled={isMenuOpen}
+        openDelay={TOOLTIP_DELAY}
+      >
+        <ButtonIcon
+          ariaLabel='Change theme'
+          color='gray'
+          icon={selectedColorScheme.icon}
+          variant='ghost'
+        />
+      </Tooltip>
+    </div>
   )
 
   const handleOnChange = (isOpen: boolean) => setIsMenuOpen(isOpen)

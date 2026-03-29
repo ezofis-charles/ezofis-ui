@@ -18,14 +18,14 @@ export const TreeNode = (props: TreeView.NodeProviderProps<Node>) => {
             <TreeView.Branch className='relative'>
               <TreeView.BranchControl className='user-select-none flex items-center gap-1.5 rounded p-2 outline-primary-8 hover:cursor-pointer hover:bg-gray-3 data-selected:bg-gray-3'>
                 <TreeView.BranchIndicator className='flex size-5 items-center justify-center text-gray-9 transition-transform data-[state=open]:rotate-90'>
-                  <Icon name='lucide:chevron-right' />
+                  <Icon name='tabler:chevron-right' />
                 </TreeView.BranchIndicator>
                 <TreeView.BranchText className='flex items-center gap-2'>
                   <div className='flex size-5 items-center justify-center text-gray-10'>
                     {nodeState.expanded ? (
-                      <Icon name='lucide:folder-open' />
+                      <Icon name='tabler:folder-open' />
                     ) : (
-                      <Icon name='lucide:folder' />
+                      <Icon name='tabler:folder' />
                     )}
                   </div>
                   <div className='text-micro font-medium text-gray-12'>
@@ -48,7 +48,7 @@ export const TreeNode = (props: TreeView.NodeProviderProps<Node>) => {
             <TreeView.Item className='rounded p-2 outline-primary-8 hover:cursor-pointer hover:bg-gray-3 data-selected:bg-gray-3'>
               <TreeView.ItemText className='flex items-center gap-2'>
                 <div className='flex size-5 items-center justify-center text-gray-10'>
-                  <Icon name='lucide:file' />
+                  <Icon name='tabler:file' />
                 </div>
                 <div className='text-micro font-medium text-gray-12'>
                   {node.name}

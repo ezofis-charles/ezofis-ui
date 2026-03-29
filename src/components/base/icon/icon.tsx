@@ -12,12 +12,9 @@ export const Icon = forwardRef<SVGSVGElement, Props>(
   ({ className, name }, ref) => {
     return (
       <Base
+        className={cn('inline-block size-4 shrink-0 text-inherit', className)}
         icon={name}
         ref={ref}
-        className={cn(
-          'inline-block size-5 shrink-0 text-inherit md:size-4',
-          className,
-        )}
       />
     )
   },

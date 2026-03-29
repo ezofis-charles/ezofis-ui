@@ -60,7 +60,7 @@ const ComboboxTarget = forwardRef<HTMLButtonElement, Props>(
     ) : clearable && value.length > 0 ? (
       <ButtonClose size='xs' onClick={() => onChange([])} />
     ) : (
-      <Icon className='text-gray-10' name='lucide:chevron-down' />
+      <Icon className='text-gray-10' name='tabler:chevron-down' />
     )
 
     const children = useMemo(() => {

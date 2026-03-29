@@ -28,17 +28,17 @@ function RouteComponent() {
       <Section title='With Icon'>
         <SegmentGroup value={value} onChange={setValue}>
           <SegmentGroup.Item
-            icon='lucide:text-align-start'
+            icon='tabler:text-align-start'
             label='Left'
             value='Left'
           />
           <SegmentGroup.Item
-            icon='lucide:text-align-center'
+            icon='tabler:text-align-center'
             label='Center'
             value='Center'
           />
           <SegmentGroup.Item
-            icon='lucide:text-align-end'
+            icon='tabler:text-align-end'
             label='Right'
             value='Right'
           />
@@ -47,9 +47,9 @@ function RouteComponent() {
 
       <Section title='Icon Only'>
         <SegmentGroup value={value} onChange={setValue}>
-          <SegmentGroup.Item icon='lucide:text-align-start' value='Left' />
-          <SegmentGroup.Item icon='lucide:text-align-center' value='Center' />
-          <SegmentGroup.Item icon='lucide:text-align-end' value='Right' />
+          <SegmentGroup.Item icon='tabler:text-align-start' value='Left' />
+          <SegmentGroup.Item icon='tabler:text-align-center' value='Center' />
+          <SegmentGroup.Item icon='tabler:text-align-end' value='Right' />
         </SegmentGroup>
       </Section>
 

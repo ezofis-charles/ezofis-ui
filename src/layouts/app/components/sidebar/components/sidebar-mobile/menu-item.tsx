@@ -5,7 +5,7 @@ import type { SidebarMenuItem as SidebarMenuItemType } from '../../sidebar.types
 
 type Props = SidebarMenuItemType
 
-export const MenuGroupItem = ({ activeIcon, icon, label, route }: Props) => {
+export const MenuItem = ({ activeIcon, icon, label, route }: Props) => {
   const pathname = useLocation({
     select: (location) => location.pathname,
   })
@@ -19,7 +19,7 @@ export const MenuGroupItem = ({ activeIcon, icon, label, route }: Props) => {
         isActive && 'bg-gray-4',
       )}
     >
-      <div className='flex size-8 shrink-0 items-center justify-center'>
+      <div className='flex size-10 shrink-0 items-center justify-center'>
         <Icon
           name={isActive ? activeIcon : icon}
           className={cn(

@@ -51,7 +51,7 @@ function RouteComponent() {
           <InputCheckboxCard
             checked={selected.includes(1)}
             description='Lorem ipsum dolor sit'
-            icon='lucide:smartphone'
+            icon='tabler:smartphone'
             label='Label'
             onClick={() => handleClick(1)}
           />
