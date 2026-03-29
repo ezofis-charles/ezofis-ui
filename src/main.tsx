@@ -3,13 +3,15 @@ import { createRoot } from 'react-dom/client'
 import { Toaster } from '@/components/base/toast/toaster'
 import { TanstackQueryProvider } from '@/libs/tanstack-query'
 import { TanstackRouterProvider } from '@/libs/tanstack-router'
+import { RootFontSizeProvider } from './components/common/root-font-size-provider'
 import { LingUiProvider } from './libs/lingui/ling-ui-provider'
-import { MantineProvider } from './libs/mantine/mantine-provider'
 import './styles/index.css'
+import { MantineProvider } from './libs/mantine/mantine-provider'
 
 createRoot(document.querySelector('#root')!).render(
   <StrictMode>
     <LingUiProvider>
+      <RootFontSizeProvider />
       <Toaster />
       <MantineProvider>
         <TanstackQueryProvider>
