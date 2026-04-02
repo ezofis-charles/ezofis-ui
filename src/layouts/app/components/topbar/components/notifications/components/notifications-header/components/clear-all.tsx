@@ -7,7 +7,7 @@ export const ClearAll = () => {
       <ButtonIcon
         ariaLabel='clear all'
         color='gray'
-        icon='tabler:brush-cleaning'
+        icon='tabler:clear-all'
         variant='ghost'
       />
     </Tooltip>

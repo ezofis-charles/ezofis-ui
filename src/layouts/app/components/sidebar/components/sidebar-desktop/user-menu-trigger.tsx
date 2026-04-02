@@ -22,7 +22,7 @@ export const UserMenuTrigger = () => {
           image={user.avatar}
           imageLabel='user picture'
           initials='CV'
-          size={32}
+          size={30}
         />
       </div>
 

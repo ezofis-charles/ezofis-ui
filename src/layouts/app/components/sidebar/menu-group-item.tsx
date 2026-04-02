@@ -1,11 +1,19 @@
 import { Link, useLocation } from '@tanstack/react-router'
 import { Icon } from '@/components/base/icon'
 import { cn } from '@/utils/cn'
-import type { SidebarMenuItem as SidebarMenuItemType } from '../../sidebar.types'
+import type { SidebarMenuItem as SidebarMenuItemType } from './sidebar.types'
 
-type Props = SidebarMenuItemType
+interface Props extends SidebarMenuItemType {
+  iconClassName?: string
+}
 
-export const MenuItem = ({ activeIcon, icon, label, route }: Props) => {
+export const MenuGroupItem = ({
+  activeIcon,
+  icon,
+  iconClassName,
+  label,
+  route,
+}: Props) => {
   const pathname = useLocation({
     select: (location) => location.pathname,
   })
@@ -19,7 +27,12 @@ export const MenuItem = ({ activeIcon, icon, label, route }: Props) => {
         isActive && 'bg-gray-4',
       )}
     >
-      <div className='flex size-10 shrink-0 items-center justify-center'>
+      <div
+        className={cn(
+          'flex size-8 shrink-0 items-center justify-center',
+          iconClassName,
+        )}
+      >
         <Icon
           name={isActive ? activeIcon : icon}
           className={cn(

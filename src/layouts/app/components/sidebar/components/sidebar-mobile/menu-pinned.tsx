@@ -1,17 +1,25 @@
 import { Link, useLocation } from '@tanstack/react-router'
-import type { MenuItem } from '@/layouts/app/app-layout.types'
+import { useEffect } from 'react'
 import { Icon } from '@/components/base/icon'
 import { cn } from '@/utils/cn'
+import type { SidebarMenuGroup } from '../../sidebar.types'
+import { usePinnedStore } from './use-pinned-store'
 
 interface Props {
-  menu: MenuItem[]
+  menuGroup: SidebarMenuGroup[]
 }
 
-export const MenuPinned = ({ menu }: Props) => {
+export const MenuPinned = ({ menuGroup }: Props) => {
   const pathname = useLocation({
     select: (location) => location.pathname,
   })
-  const pinned = menu.slice(0, 4)
+  const pinned = usePinnedStore((state) => state.pinned)
+  const setPinned = usePinnedStore((state) => state.setPinned)
+
+  useEffect(() => {
+    const flattened = menuGroup.flatMap((group) => group.items)
+    setPinned(flattened.slice(0, 4))
+  }, [menuGroup, setPinned])
 
   return (
     <>

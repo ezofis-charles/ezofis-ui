@@ -1,18 +1,23 @@
 import type { ReactNode } from 'react'
 import { useNavigate } from '@tanstack/react-router'
 import { Menu } from '@/components/base/menu'
-import { useSidebarStore } from '@/layouts/app/stores/use-sidebar-store-copy'
+import { useSidebarStore } from '@/layouts/app/stores/use-sidebar-store'
 import { LanguageSwitcher } from './language-switcher'
 import { ThemeSwitcher } from './theme-switcher'
-import { UserInfo } from './user-info'
 
 interface Props {
-  trigger: ReactNode
+  alignmentAxis?: number
+  trigger?: ReactNode
+  withinPortal?: boolean
 }
 
-export const UserMenu = ({ trigger }: Props) => {
+export const UserMenu = ({
+  alignmentAxis = 8,
+  trigger,
+  withinPortal = true,
+}: Props) => {
   const navigate = useNavigate()
-  const isSidebarOpen = useSidebarStore((state) => state.isSidebarOpen)
+  const sidebarState = useSidebarStore((state) => state.sidebarState)
 
   const goto = (slug: string) => {
     navigate({ params: { slug }, to: '/my-account/{-$slug}' })
@@ -24,13 +29,13 @@ export const UserMenu = ({ trigger }: Props) => {
 
   return (
     <Menu
-      offset={{ alignmentAxis: 8, mainAxis: isSidebarOpen ? 8 : 0 }}
+      offset={{ alignmentAxis, mainAxis: sidebarState === 'expanded' ? 8 : 0 }}
       position='top-start'
       target={trigger}
+      targetClassName='w-full'
       width={224}
+      withinPortal={withinPortal}
     >
-      <UserInfo />
-      <Menu.Divider />
       <Menu.Item
         icon='tabler:user'
         label='Profile'

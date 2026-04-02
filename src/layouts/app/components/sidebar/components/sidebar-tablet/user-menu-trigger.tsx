@@ -1,13 +1,23 @@
 import { Avatar } from '@/components/base/avatar'
 import { Icon } from '@/components/base/icon'
 import { useSessionStore } from '@/stores/use-session-store'
+import { cn } from '@/utils/cn'
 
-export const UserMenuTrigger = () => {
+interface Props {
+  className?: string
+}
+
+export const UserMenuTrigger = ({ className }: Props) => {
   const user = useSessionStore((state) => state.user)
 
   return (
-    <div className='mx-1 flex cursor-pointer items-center gap-2 p-1'>
-      <div className='flex h-12 w-8 shrink-0 items-center justify-center'>
+    <div
+      className={cn(
+        'mx-1 flex cursor-pointer items-center gap-3 p-1',
+        className,
+      )}
+    >
+      <div className='flex h-10 w-8 shrink-0 items-center justify-center'>
         <Avatar
           className='border border-gray-3'
           image={user.avatar}
