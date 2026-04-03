@@ -1,50 +1,51 @@
-import { useState } from 'react'
-import { ButtonIcon } from '@/components/base/button'
+import { move } from '@dnd-kit/helpers'
+import { DragDropProvider } from '@dnd-kit/react'
 import { Icon } from '@/components/base/icon'
-import { ScrollArea } from '@/components/base/scroll-area'
 import { Sheet } from '@/components/base/sheet'
-import type { SidebarMenuGroup } from '../../sidebar.types'
-import { usePinnedStore } from './use-pinned-store'
+import { Sortable } from '@/components/base/sortable'
+import type { SidebarMenuItem } from '../../sidebar.types'
 
 interface Props {
-  menuGroup: SidebarMenuGroup[]
+  items: SidebarMenuItem[]
+  open: boolean
+  setItems: (items: SidebarMenuItem[]) => void
+  onClose: () => void
 }
 
-export const MenuCustomize = ({ menuGroup }: Props) => {
-  const [open, setOpen] = useState(false)
-  const setPinned = usePinnedStore((state) => state.setPinned)
-  console.log('🚀 ~ MenuCustomize ~ flattened:', setPinned)
-
-  const flattened = menuGroup.flatMap((group) => group.items)
-  console.log('🚀 ~ MenuCustomize ~ flattened:', flattened)
-
+export const MenuCustomize = ({ items, open, setItems, onClose }: Props) => {
   return (
-    <div>
-      <ButtonIcon
-        color='gray'
-        icon='material-symbols:page-info-outline-rounded'
-        size='xl'
-        variant='ghost'
-        onClick={() => setOpen(true)}
-      />
+    <Sheet open={open} onClose={onClose}>
+      <DragDropProvider
+        onDragEnd={(event) => {
+          if (event.canceled) return
 
-      <Sheet open={open} onClose={() => setOpen(false)}>
-        <ScrollArea className='h-96'>
-          <ul className='space-y-1'>
-            {flattened.map((item) => (
-              <li className='flex items-center px-2' key={item.label}>
-                <div className='flex size-9 shrink-0 items-center justify-center'>
-                  <Icon className='text-gray-11' name={item.icon} />
-                </div>
+          const ids = items.map((item) => item.label)
+          const movedIds = move(ids, event)
+          const movedItems = movedIds.map(
+            (id) => items.find((item) => item.label === id)!,
+          )
+          setItems(movedItems)
+        }}
+      >
+        <ul className='space-y-1'>
+          {items.map((item, index) => (
+            <Sortable
+              className='flex items-center px-2'
+              id={item.label}
+              index={index}
+              key={item.label}
+            >
+              <div className='flex size-9 shrink-0 items-center justify-center'>
+                <Icon className='text-gray-11' name={item.icon} />
+              </div>
 
-                <div className='pr-2 font-medium whitespace-nowrap text-gray-12'>
-                  {item.label}
-                </div>
-              </li>
-            ))}
-          </ul>
-        </ScrollArea>
-      </Sheet>
-    </div>
+              <div className='pr-2 font-medium whitespace-nowrap text-gray-12'>
+                {item.label}
+              </div>
+            </Sortable>
+          ))}
+        </ul>
+      </DragDropProvider>
+    </Sheet>
   )
 }

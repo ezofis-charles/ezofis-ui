@@ -18,7 +18,7 @@ export const Sheet = ({ children, open, onClose }: Props) => {
   }, [onClose, router])
 
   return (
-    <Base.Root open={open} autoFocus onClose={onClose}>
+    <Base.Root dismissible={false} open={open} autoFocus onClose={onClose}>
       <Base.Portal>
         <Base.Overlay className='fixed inset-0 bg-black/40' />
         <Base.Content
