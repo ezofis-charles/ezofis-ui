@@ -1,3 +1,3 @@
 export const DashboardPage = () => {
-  return <div className='p-4 xl:p-6'></div>
+  return <div className='flex items-center justify-center p-6'></div>
 }
