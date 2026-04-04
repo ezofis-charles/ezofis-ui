@@ -27,7 +27,10 @@ export const SidebarDesktop = ({ menuGroup }: Props) => {
     >
       <Logo />
       <MenuGroup menuGroup={menuGroup} />
-      <UserMenu trigger={<UserMenuTrigger />} />
+      <UserMenu
+        mainAxis={sidebarState === 'expanded' ? 8 : 0}
+        trigger={<UserMenuTrigger />}
+      />
     </motion.div>
   )
 }

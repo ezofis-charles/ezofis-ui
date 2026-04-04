@@ -1,23 +1,23 @@
 import type { ReactNode } from 'react'
 import { useNavigate } from '@tanstack/react-router'
 import { Menu } from '@/components/base/menu'
-import { useSidebarStore } from '@/layouts/app/stores/use-sidebar-store'
 import { LanguageSwitcher } from './language-switcher'
 import { ThemeSwitcher } from './theme-switcher'
 
 interface Props {
   alignmentAxis?: number
+  mainAxis?: number
   trigger?: ReactNode
   withinPortal?: boolean
 }
 
 export const UserMenu = ({
   alignmentAxis = 8,
+  mainAxis = 8,
   trigger,
   withinPortal = true,
 }: Props) => {
   const navigate = useNavigate()
-  const sidebarState = useSidebarStore((state) => state.sidebarState)
 
   const goto = (slug: string) => {
     navigate({ params: { slug }, to: '/my-account/{-$slug}' })
@@ -29,7 +29,7 @@ export const UserMenu = ({
 
   return (
     <Menu
-      offset={{ alignmentAxis, mainAxis: sidebarState === 'expanded' ? 8 : 0 }}
+      offset={{ alignmentAxis, mainAxis }}
       position='top-start'
       target={trigger}
       targetClassName='w-full'

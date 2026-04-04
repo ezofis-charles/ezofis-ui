@@ -74,13 +74,11 @@ function RouteComponent() {
           label='Loading'
           variant='outline'
           onClick={() => {
-            const toastId = showToast({
+            showToast({
               description: 'Monday, March 3rd at 6.30 PM',
               title: 'Creating new event',
               variant: 'loading',
             })
-
-            console.log('🚀 ~ RouteComponent ~ toastId:', toastId)
           }}
         />
       </Section>

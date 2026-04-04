@@ -19,7 +19,7 @@ export const Menu = ({ menuGroup, open, onClose, onCustomize }: Props) => {
 
       <div className='mr-4 mb-4 ml-5 flex items-center border-t border-gray-3 pt-4'>
         <UserMenu
-          alignmentAxis={16}
+          alignmentAxis={0}
           trigger={<UserMenuTrigger />}
           withinPortal={false}
         />
