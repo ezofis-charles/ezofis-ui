@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from 'motion/react'
-import { AI_BAR_WIDTH } from '@/constants'
-import { useAiBarStore } from '@/layouts/app/stores/use-aibar-store'
+import { useAiChatStore } from '@/layouts/app/stores/use-ai-chat-store'
+
+const AI_BAR_WIDTH = 384
 
 const TRANSITION = {
   damping: 30,
@@ -13,15 +14,15 @@ const OPACITY_TRANSITION = {
   duration: 0.2,
 }
 
-const aiBarSpacerMotion = {
+const aiChatSpacerMotion = {
   initial: false,
   transition: TRANSITION,
-  animate: (isAiBarOpen: boolean) => ({
-    width: isAiBarOpen ? AI_BAR_WIDTH : 0,
+  animate: (isAiChatOpen: boolean) => ({
+    width: isAiChatOpen ? AI_BAR_WIDTH : 0,
   }),
 }
 
-const aiBarContentMotion = {
+const aiChatContentMotion = {
   animate: { opacity: 1, x: 0 },
   exit: { opacity: 0, x: AI_BAR_WIDTH },
   initial: { opacity: 0, x: AI_BAR_WIDTH },
@@ -31,24 +32,24 @@ const aiBarContentMotion = {
   },
 }
 
-export const AiBar = () => {
-  const isAiBarOpen = useAiBarStore((state) => state.isAiBarOpen)
+export const AiChat = () => {
+  const isAiChatOpen = useAiChatStore((state) => state.isAiChatOpen)
 
   return (
-    <>
+    <div className='ml-1'>
       <motion.div
-        animate={aiBarSpacerMotion.animate(isAiBarOpen)}
-        initial={aiBarSpacerMotion.initial}
-        transition={aiBarSpacerMotion.transition}
+        animate={aiChatSpacerMotion.animate(isAiChatOpen)}
+        initial={aiChatSpacerMotion.initial}
+        transition={aiChatSpacerMotion.transition}
       />
       <AnimatePresence>
-        {isAiBarOpen && (
+        {isAiChatOpen && (
           <motion.div
-            {...aiBarContentMotion}
+            {...aiChatContentMotion}
             className='fixed top-1 right-1 bottom-1 w-96 rounded-xl border border-gray-3 bg-surface p-4'
           ></motion.div>
         )}
       </AnimatePresence>
-    </>
+    </div>
   )
 }

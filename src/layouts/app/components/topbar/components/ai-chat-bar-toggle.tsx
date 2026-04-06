@@ -1,15 +1,15 @@
 import { ButtonIcon } from '@/components/base/button'
 import { Tooltip } from '@/components/base/tooltip'
 import { TOOLTIP_DELAY } from '@/constants'
-import { useAiBarStore } from '@/layouts/app/stores/use-aibar-store'
+import { useAiChatStore } from '@/layouts/app/stores/use-ai-chat-store'
 
 export const AiChatBarToggle = () => {
-  const isAiBarOpen = useAiBarStore((state) => state.isAiBarOpen)
-  const toggleAiBar = useAiBarStore((state) => state.toggleAiBar)
+  const isAiChatOpen = useAiChatStore((state) => state.isAiChatOpen)
+  const toggleAiChat = useAiChatStore((state) => state.toggleAiChat)
 
   return (
     <Tooltip
-      content={isAiBarOpen ? 'Collapse AI Chat' : 'Expand AI Chat'}
+      content={isAiChatOpen ? 'Collapse AI Chat' : 'Expand AI Chat'}
       openDelay={TOOLTIP_DELAY * 2}
       position='bottom-end'
     >
@@ -18,7 +18,7 @@ export const AiChatBarToggle = () => {
         color='gray'
         icon='boxicons:sparkle'
         variant='ghost'
-        onClick={toggleAiBar}
+        onClick={toggleAiChat}
       />
     </Tooltip>
   )

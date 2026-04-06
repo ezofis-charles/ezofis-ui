@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from 'motion/react'
 import { Divider } from '@/components/base/divider'
+import { ANIMATE_NORMAL } from '@/constants'
 import { useSidebarStore } from '@/layouts/app/stores/use-sidebar-store'
 import { cn } from '@/utils/cn'
 
@@ -13,7 +14,7 @@ const animationConfig = {
   className: 'overflow-hidden',
   exit: { height: 0, opacity: 0 },
   initial: { height: 0, opacity: 0 },
-  transition: { duration: 0.15 },
+  transition: { duration: ANIMATE_NORMAL },
 }
 
 export const MenuGroupLabel = ({ index, label }: Props) => {

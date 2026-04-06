@@ -22,8 +22,8 @@ export const SidebarMobile = ({ menuGroup }: Props) => {
   }
 
   return (
-    <div className='fixed bottom-0 left-0 w-full border-t border-gray-4 bg-surface-raised px-4 py-3'>
-      <div className='flex items-center justify-around gap-4'>
+    <div className='fixed inset-x-0 bottom-0 border-t border-gray-4 bg-surface-raised px-4'>
+      <div className='flex h-16 items-center justify-around gap-4'>
         <MenuPinned items={items} />
         <ButtonIcon
           color='gray'

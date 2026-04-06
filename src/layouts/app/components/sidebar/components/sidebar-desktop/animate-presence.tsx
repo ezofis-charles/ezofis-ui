@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import { AnimatePresence as Base, motion } from 'motion/react'
+import { ANIMATE_NORMAL } from '@/constants'
 import { useSidebarStore } from '@/layouts/app/stores/use-sidebar-store'
 import { cn } from '@/utils/cn'
 
@@ -19,7 +20,7 @@ export const AnimatePresence = ({ children, className }: Props) => {
           className={cn('overflow-hidden', className)}
           exit={{ opacity: 0, width: 0 }}
           initial={{ opacity: 0, width: 0 }}
-          transition={{ duration: 0.15 }}
+          transition={{ duration: ANIMATE_NORMAL }}
         >
           {children}
         </motion.div>
