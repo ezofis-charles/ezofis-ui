@@ -13,7 +13,7 @@ export const Main = ({ children }: Props) => {
   return (
     <main
       className={cn(
-        'max-h-dvh overflow-hidden bg-surface transition-all duration-150 ease-out xl:py-1 xl:pr-1',
+        'max-h-dvh min-h-dvh overflow-hidden transition-all duration-150 ease-out xl:py-1 xl:pr-1',
         sidebarState === 'collapsed' ? 'xl:ml-12' : 'xl:ml-60',
       )}
     >

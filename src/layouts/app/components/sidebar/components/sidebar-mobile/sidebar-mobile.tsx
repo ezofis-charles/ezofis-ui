@@ -22,7 +22,7 @@ export const SidebarMobile = ({ menuGroup }: Props) => {
   }
 
   return (
-    <div className='fixed inset-x-0 bottom-0 border-t border-gray-4 bg-surface-raised px-4'>
+    <div className='fixed inset-x-0 bottom-0 rounded-t-2xl bg-surface-raised px-4 ring ring-gray-4'>
       <div className='flex h-16 items-center justify-around gap-4'>
         <MenuPinned items={items} />
         <ButtonIcon
